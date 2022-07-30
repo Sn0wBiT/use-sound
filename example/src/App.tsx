@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSound } from '@sn0wbit/use-sound'
+import useSound from '@sn0wbit/use-sound'
 
 
 const App = () => {

@@ -1,7 +1,7 @@
 {
   "name": "@sn0wbit/use-sound",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "1.0.1",
+  "description": "Simple useSound hook that allow you to play audio file by just 1 hook.",
   "author": "Sn0wBiT",
   "license": "MIT",
   "repository": "Sn0wBiT/@sn0wbit/use-sound",
