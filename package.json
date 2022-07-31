@@ -1,6 +1,6 @@
 {
   "name": "@sn0wbit/use-sound",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple useSound hook that allow you to play audio file by just 1 hook.",
   "author": "Sn0wBiT",
   "license": "MIT",

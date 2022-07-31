@@ -7,7 +7,7 @@ export type PlayFunction = () => void
 export type ReturnValue = [PlayFunction]
 
 interface TuseSoundProps {
-  src: string
+  src: string | string[]
   volume?: number
 }
 
@@ -18,7 +18,7 @@ export const useSound = (props: TuseSoundProps) => {
   const initHowler = async () => {
     const mod = await import('howler')
     const howler = new mod.Howl({
-      src: [src],
+      src: Array.isArray(src) ? src : [src],
       volume: volume
     })
     setHowler(howler)
