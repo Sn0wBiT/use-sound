@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useSound from '@sn0wbit/use-sound'
 
-
+const navSounds = [
+  require('./assets/audio/FRONTEND_NAV_GEN_03.wav'),
+  require('./assets/audio/FRONTEND_NAV_GEN_04.wav')
+]
 const App = () => {
+  const [randomIndex, setRandomIndex] = useState<number>(0)
+
   const [playNavigate] = useSound({
-    src: require('./assets/audio/FRONTEND_NAV_GEN_03.wav'),
+    src: navSounds[randomIndex],
     volume: 0.5
   })
   const [playNavigate2] = useSound({
@@ -14,6 +19,11 @@ const App = () => {
   return (
     <div>
       <p>Example</p>
+      <div>
+      <button onClick={() => {
+          randomIndex === 0 ? setRandomIndex(1) : setRandomIndex(0)
+        }}>Switch sound 1</button>
+      </div>
       <div>
         <button onClick={() => {
           playNavigate()

@@ -15,6 +15,15 @@ export const useSound = (props: TuseSoundProps) => {
   const { src, volume = 1 } = props
   const [howler, setHowler] = useState<Howl | null>(null)
 
+  const initHowler = async () => {
+    const mod = await import('howler')
+    const howler = new mod.Howl({
+      src: [src],
+      volume: volume
+    })
+    setHowler(howler)
+  }
+
   const play: PlayFunction = useCallback(
     (options?: any) => {
       if (typeof options === 'undefined') {
@@ -31,16 +40,12 @@ export const useSound = (props: TuseSoundProps) => {
   )
 
   useEffect(() => {
-    const initHowler = async () => {
-      const mod = await import('howler')
-      const howler = new mod.Howl({
-        src: [src],
-        volume: volume
-      })
-      setHowler(howler)
-    }
     initHowler()
   }, [])
+
+  useEffect(() => {
+    initHowler()
+  }, [src, volume])
 
   useEffect(() => {
     if (howler === null) {
