@@ -1,10 +1,11 @@
 {
   "name": "@sn0wbit/use-sound",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Simple useSound hook that allow you to play audio file by just 1 hook.",
   "author": "Sn0wBiT",
   "license": "MIT",
-  "repository": "Sn0wBiT/@sn0wbit/use-sound",
+  "repository": "https://github.com/Sn0wBiT/use-sound.git",
+  "homepage": "https://thientd.dev/packages/use-sound",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
